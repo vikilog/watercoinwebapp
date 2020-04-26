@@ -44,7 +44,7 @@ make a post request to "<hostname>/auth/register" and pass all the information o
   to login
   make a post request to "<host>/auth/login" and pass email and password inside the body of request.Once the request recived,first server will check email of user then compare the password with hased password.if logedin,then server will return all the information of user like id,email,firstname,lastname,mobile and a token with expire time 1 hour
   
-  #profile update route
+#profile update route
   to update text data(except email and password)
   make a put request to "<host>/user/profile/update/<user's email as params>" and all the information which you want to update inside the request body     with properity and their value e.g {"firstname":"name"}.once email is varified then it update the data and return 200
   
@@ -54,8 +54,7 @@ make a post request to "<hostname>/auth/register" and pass all the information o
   to view profile
   make post request to "<host>/user/profile" and email inside request body.Once User is verified then it will return all the information of user
   
-  
-  #card route
+#card route
   
   to add a card it will go through two security check.first it will validate user with email and password then it check for given card number that this card is present or not in database.if it is then it will send 409.Once the card number is checked into database then it validate that number is valid or not.if card is valid then card is added to database else 409 is returned .
   for that make post request to "<host>/card/add" and inside the body of request add following information
@@ -73,8 +72,7 @@ make a post request to "<hostname>/auth/register" and pass all the information o
   
   make delete request to "<host>/card/delete" and inside body pass email,password and cardnumber.Again first user is verified than card verifed after that card is deleted
   
-  
-  #Additional 
+#Additional 
   There are two middle ware which can be used for validation
   1-check-auth - which can be used for verification of user's token
   2-check-image -whcih is used for incoming image to check their tpye and size
